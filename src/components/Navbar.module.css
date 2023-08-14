@@ -1,0 +1,38 @@
+nav {
+  position: sticky;
+  color: rgba(255, 255, 255, 0.87);
+  top: 0;
+  left: 0;
+
+  background-color: #262626;
+  margin: 20px;
+  padding: 10px 30px;
+  gap: 10px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+nav a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+nav h1 {
+  font-weight: 400;
+}
+
+nav span {
+  font-weight: 700;
+}
