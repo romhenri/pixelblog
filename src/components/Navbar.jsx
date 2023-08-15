@@ -12,7 +12,9 @@ const Navbar = () => {
       <NavLink to="/">Início</NavLink>
       <NavLink to="about">About</NavLink>
       <NavLink to="posts">Posts</NavLink>
-      <Button text="Registre-se"/>
+      <NavLink to="singup">
+        <Button text="Registre-se"/>
+      </NavLink>
       </div>
 
       

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import PostsPage from './pages/PostsPage'
+import SingupPage from './pages/SingupPage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             </section>
         </main>}/>
           <Route path='posts' element={<PostsPage/>}/>
+          <Route path='singup' element={<SingupPage/>}/>
           <Route path='*' element={"404"}/>
         </Routes>
 

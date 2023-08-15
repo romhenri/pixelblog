@@ -5,15 +5,17 @@ nav {
   left: 0;
 
   background-color: #262626;
-  margin: 20px;
+  margin: 20px auto;
   padding: 10px 30px;
   gap: 10px;
   border-radius: 10px;
+  max-width: 1080px;
 
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 nav a {

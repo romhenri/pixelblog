@@ -1,8 +1,13 @@
 :root {
-  
   background-color: #f6f6f6;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-sizing: content-box;
+
+  --bg: #fff;
+	--bg2: #d4d4d4;
+	--bg3: #f8f8f8;
+	--c1: #000;
+	--bgc: #d4d4d4;
+  --active: #1786fa
 }
 
 body {
@@ -20,7 +25,7 @@ main {
 }
 
 button {
-  background-color: #1786fa;
+  background-color: var(--active);
   color: #ffff;
   padding: 10px;
   border: none;
@@ -32,17 +37,39 @@ button:hover {
   cursor: pointer;
 }
 
+.btn-b {
+	color: var(--c1);
+  border: 2px solid var(--active);
+}
+
+.buttonsLine {
+	display: flex;
+	justify-content: flex-end;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+  margin: 10px 0px 0px 0px;
+  gap: 10px;
+}
+
 section {
   padding: 20px;
-  margin: 20px;
+  margin: 30px auto;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   border-radius: 10px;
+  max-width: 1080px;
+}
+
+section.simple {
+  max-width: 680px;
 }
 
 .active {
-  color: #1786fa;
-  /* font-weight: 500; */
+  color: var(--active);
   transition: color .3s;
+}
+
+.active button {
+  display: none;
 }
 
 footer {
@@ -61,3 +88,39 @@ a {
   color: hwb(0 0% 100% / 0.800);
   text-align: center;
 }
+
+input:focus {
+	outline: 2px solid var(--active);
+	border: 1px solid transparent;
+}
+
+label {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px; 
+	flex: 1 1 380px;
+	font-size: 0.8rem;
+  margin: 10px 0px;
+}
+
+input {
+	padding: 10px 10px;
+	border-radius: 5px;
+	border: 1px solid var(--bg2);
+	color: var(--c1);
+	background-color: var(--bg3);
+	font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  a {
+   display: flex;
+  }
+ 
+   button {
+     flex-basis: 0;
+     flex-grow: 1 !important;
+   }
+ 
+ }
