@@ -60,7 +60,7 @@ section {
 }
 
 section.simple {
-  max-width: 680px;
+  max-width: 520px;
 }
 
 .active {
@@ -68,9 +68,7 @@ section.simple {
   transition: color .3s;
 }
 
-.active button {
-  display: none;
-}
+.active button 
 
 footer {
   font-size: 14px;
@@ -111,6 +109,12 @@ input {
 	color: var(--c1);
 	background-color: var(--bg3);
 	font-size: 1rem;
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 @media (max-width: 600px) {
