@@ -2,18 +2,22 @@ import React, {useState} from 'react'
 import Input from '../components/Input'
 import Button from '../components/Button'
 import ButtonsLine from '../components/ButtonsLine'
+import { useAuthentication } from '../hooks/useAuthentication'
+import * as firebase from 'firebase';
 
 const SingupPage = () => {
   const [displayName, setDisplayName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
-  const [error, setError] = useState("")
+  const [frontError, setFrontError] = useState("")
+
+  const [creatUser, error, loading] = useAuthentication()
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    setError("")
+    setFrontError("")
 
     const user = {
       displayName,
@@ -71,7 +75,7 @@ const SingupPage = () => {
           <label>Use uma senha Forte!</label>
 
           <div>
-            {error && <p className='error'>{error}</p>}
+            {frontError && <p className='error'>{frontError}</p>}
           </div>
 
           <ButtonsLine>
